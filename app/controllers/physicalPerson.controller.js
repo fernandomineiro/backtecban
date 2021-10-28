@@ -32,24 +32,15 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-  // const title = req.query.title;
-  // var condition = title
-  //   ? { title: { $regex: new RegExp(title), $options: "i" } }
-  //   : {};
-
-  // Tutorial.find(condition)
-  //   .then((data) => {
-  //     res.send(data);
-  //   })
-  //   .catch((err) => {
-  //     res.status(500).send({
-  //       message:
-  //         err.message || "Some error occurred while retrieving tutorials.",
-  //     });
-  //   });
-  res.status(200).send({
-    message: `Aqui`,
-  });
+  PhysicalPerson.find()
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || "Error",
+      });
+    });
 };
 
 exports.findOne = (req, res) => {
