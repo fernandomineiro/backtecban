@@ -10,7 +10,7 @@ module.exports = (mongoose) => {
       estado_civil: String,
       sexo: String,
       nacionalidade: String,
-      id_auth: String,
+      auth: String,
     },
     { timestamps: true }
   );
