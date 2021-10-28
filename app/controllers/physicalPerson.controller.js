@@ -2,7 +2,7 @@ const db = require("../models");
 const PhysicalPerson = db.physicalPerson;
 
 exports.create = (req, res) => {
-  if (!req.body.title) {
+  if (!req.body.nome) {
     res.status(400).send({ message: "Contem campo vazio!" });
     return;
   }
