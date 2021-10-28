@@ -1,27 +1,32 @@
 const db = require("../models");
-const Tutorial = db.tutorials;
+const PhysicalPerson = db.physicalPerson;
 
 exports.create = (req, res) => {
   if (!req.body.title) {
-    res.status(400).send({ message: "Content can not be empty!" });
+    res.status(400).send({ message: "Contem campo vazio!" });
     return;
   }
 
-  const tutorial = new Tutorial({
-    title: req.body.title,
-    description: req.body.description,
-    published: req.body.published ? req.body.published : false,
+  const save = new PhysicalPerson({
+    nome: req.body.nome,
+    numero: req.body.numero,
+    nome_razao: req.body.nome_razao,
+    numero_cadastro: req.body.numero_cadastro,
+    nome_civil: req.body.nome_civil,
+    data_nascimento: req.body.data_nascimento,
+    estado_civil: req.body.estado_civil,
+    sexo: req.body.sexo,
+    nacionalidade: req.body.nacionalidade,
   });
 
-  tutorial
-    .save(tutorial)
+  save
+    .save(save)
     .then((data) => {
       res.send(data);
     })
     .catch((err) => {
       res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Tutorial.",
+        message: err.message || "Error.",
       });
     });
 };
