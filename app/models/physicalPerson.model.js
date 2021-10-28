@@ -6,7 +6,7 @@ module.exports = (mongoose) => {
       nome_razao: String,
       numero_cadastro: Number,
       nome_civil: String,
-      data_nascimento: Date,
+      data_nascimento: String,
       estado_civil: String,
       sexo: String,
       nacionalidade: String,
