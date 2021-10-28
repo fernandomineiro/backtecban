@@ -32,7 +32,7 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-  PhysicalPerson.find({})
+  PhysicalPerson.find({ id_auth: req.body.auth })
     .then((data) => {
       res.send(data);
     })
