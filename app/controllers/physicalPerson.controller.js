@@ -35,7 +35,7 @@ exports.findAll = (req, res) => {
 
   PhysicalPerson.find({ id_auth: req.body.auth })
     .then((data) => {
-      res.send(data, req.body.auth);
+      res.send(req.body.auth);
     })
     .catch((err) => {
       res.status(500).send({
