@@ -1,9 +1,15 @@
 module.exports = (mongoose) => {
   var schema = mongoose.Schema(
     {
-      title: String,
-      description: String,
-      published: Boolean,
+      nome: String,
+      numero: Number,
+      nome_razao: String,
+      numero_cadastro: Number,
+      nome_civil: String,
+      data_nascimento: Date,
+      estado_civil: String,
+      sexo: String,
+      nacionalidade: String,
     },
     { timestamps: true }
   );
