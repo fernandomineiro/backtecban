@@ -22,7 +22,7 @@ exports.create = (req, res) => {
   save
     .save(save)
     .then((data) => {
-      res.send(data);
+      res.send("Criado com sucesso!");
     })
     .catch((err) => {
       res.status(500).send({
