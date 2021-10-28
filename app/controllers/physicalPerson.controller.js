@@ -32,7 +32,7 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-  PhysicalPerson.find()
+  PhysicalPerson.find({})
     .then((data) => {
       res.send(data);
     })
