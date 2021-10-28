@@ -2,6 +2,7 @@ module.exports = (mongoose) => {
   var schema = mongoose.Schema(
     {
       nome: String,
+      auth: String,
       numero: Number,
       nome_razao: String,
       numero_cadastro: Number,
@@ -10,7 +11,6 @@ module.exports = (mongoose) => {
       estado_civil: String,
       sexo: String,
       nacionalidade: String,
-      auth: String,
     },
     { timestamps: true }
   );
